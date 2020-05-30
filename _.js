@@ -20,6 +20,22 @@ const _ = {
 
         return number >= start && number < end
     },
+
+    words(string) {
+        return string.split(' ')
+    },
+
+    pad(string, length) {
+        if (string.length > length) {
+            return string
+        }
+
+        let startPaddingLength = Math.floor((length - string.length) / 2)
+        let endPaddingLength = (length - string.length) - startPaddingLength
+
+        
+        return ' '.repeat(startPaddingLength) + string + ' '.repeat(endPaddingLength)
+    }
 };
 
 // Do not write or modify code below this line.
